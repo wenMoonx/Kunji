@@ -1,0 +1,21 @@
+{
+  "overrides": [
+    {
+      "files": "*.sol",
+      "options": {
+        "printWidth": 80,
+        "tabWidth": 4,
+        "useTabs": false,
+        "singleQuote": false,
+        "bracketSpacing": false
+      }
+    },
+    {
+      "files": "*.ts",
+      "trailingComma": "es5",
+      "max_line_length": 120,
+      "print-width": 120,
+      "tabWidth": 2
+    }
+  ]
+}

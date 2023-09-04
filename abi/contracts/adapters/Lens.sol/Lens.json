@@ -1,0 +1,1473 @@
+[
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "index",
+        "type": "uint256"
+      }
+    ],
+    "name": "decreaseOrder",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "account",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "collateralToken",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "collateralDelta",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "indexToken",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "sizeDelta",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "isLong",
+            "type": "bool"
+          },
+          {
+            "internalType": "uint256",
+            "name": "triggerPrice",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "triggerAboveThreshold",
+            "type": "bool"
+          },
+          {
+            "internalType": "uint256",
+            "name": "executionFee",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct IGmxOrderBook.DecreaseOrder",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      }
+    ],
+    "name": "decreaseOrdersIndex",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      }
+    ],
+    "name": "getAllPositionsProcessed",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "size",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "collateral",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "averagePrice",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "entryFundingRate",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "hasRealisedProfit",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "realisedPnl",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "lastIncreasedTime",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "hasProfit",
+            "type": "bool"
+          },
+          {
+            "internalType": "uint256",
+            "name": "delta",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "collateralToken",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "indexToken",
+            "type": "address"
+          },
+          {
+            "internalType": "bool",
+            "name": "isLong",
+            "type": "bool"
+          }
+        ],
+        "internalType": "struct Lens.ProcessedPosition[]",
+        "name": "result",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes",
+        "name": "path",
+        "type": "bytes"
+      },
+      {
+        "internalType": "uint256",
+        "name": "amountOut",
+        "type": "uint256"
+      }
+    ],
+    "name": "getAmountIn",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "amountIn",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint160[]",
+        "name": "sqrtPriceX96AfterList",
+        "type": "uint160[]"
+      },
+      {
+        "internalType": "uint32[]",
+        "name": "initializedTicksCrossedList",
+        "type": "uint32[]"
+      },
+      {
+        "internalType": "uint256",
+        "name": "gasEstimate",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes",
+        "name": "path",
+        "type": "bytes"
+      },
+      {
+        "internalType": "uint256",
+        "name": "amountIn",
+        "type": "uint256"
+      }
+    ],
+    "name": "getAmountOut",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "amountOut",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint160[]",
+        "name": "sqrtPriceX96AfterList",
+        "type": "uint160[]"
+      },
+      {
+        "internalType": "uint32[]",
+        "name": "initializedTicksCrossedList",
+        "type": "uint32[]"
+      },
+      {
+        "internalType": "uint256",
+        "name": "gasEstimate",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "token",
+        "type": "address"
+      }
+    ],
+    "name": "getAvailableLiquidity",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "availableLong",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "availableShort",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct Lens.AvailableTokenLiquidity",
+        "name": "liquidity",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "traderWallet",
+        "type": "address"
+      }
+    ],
+    "name": "getDashboardInfo",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "totalFundsUSD",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "unusedFundsUSD",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "deployedUSD",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "currentValueUSD",
+            "type": "uint256"
+          },
+          {
+            "internalType": "int256",
+            "name": "returnsUSD",
+            "type": "int256"
+          },
+          {
+            "internalType": "int256",
+            "name": "returnsPercent",
+            "type": "int256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "totalShares",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "sharePrice",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "usdDecimals",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct Lens.UsersVaultData",
+        "name": "usersVaultData",
+        "type": "tuple"
+      },
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "totalFundsUSD",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "unusedFundsUSD",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "deployedUSD",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "currentValueUSD",
+            "type": "uint256"
+          },
+          {
+            "internalType": "int256",
+            "name": "returnsUSD",
+            "type": "int256"
+          },
+          {
+            "internalType": "int256",
+            "name": "returnsPercent",
+            "type": "int256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "uvTvUnused",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "usdDecimals",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct Lens.TraderWalletData",
+        "name": "traderWalletData",
+        "type": "tuple"
+      },
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "amountUSD",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "sharesToMint",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "sharePrice",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "totalRequests",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "usdDecimals",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct Lens.DepositData",
+        "name": "depositDataRollover",
+        "type": "tuple"
+      },
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "amountUSD",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "sharesToBurn",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "sharePrice",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "totalRequests",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "usdDecimals",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct Lens.WithdrawData",
+        "name": "withdrawDataRollover",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256[]",
+        "name": "indices",
+        "type": "uint256[]"
+      }
+    ],
+    "name": "getDecreaseOrders",
+    "outputs": [
+      {
+        "internalType": "uint256[]",
+        "name": "",
+        "type": "uint256[]"
+      },
+      {
+        "internalType": "address[]",
+        "name": "",
+        "type": "address[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "requestKey",
+        "type": "bytes32"
+      }
+    ],
+    "name": "getDecreasePositionRequest",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "account",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "indexToken",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "collateralDelta",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "sizeDelta",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "isLong",
+            "type": "bool"
+          },
+          {
+            "internalType": "address",
+            "name": "receiver",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "acceptablePrice",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "minOut",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "executionFee",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "blockNumber",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "blockTime",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "withdrawETH",
+            "type": "bool"
+          },
+          {
+            "internalType": "address",
+            "name": "callbackTarget",
+            "type": "address"
+          }
+        ],
+        "internalType": "struct IGmxPositionRouter.DecreasePositionRequest",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      }
+    ],
+    "name": "getDecreasePositionsIndex",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "usersVault",
+        "type": "address"
+      }
+    ],
+    "name": "getDepositData",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "amountUSD",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "sharesToMint",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "sharePrice",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "totalRequests",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "usdDecimals",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct Lens.DepositData",
+        "name": "result",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getGmxExecutionFee",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "token",
+        "type": "address"
+      }
+    ],
+    "name": "getGmxMaxPrice",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "token",
+        "type": "address"
+      }
+    ],
+    "name": "getGmxMinPrice",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getGmxOrderExecutionFee",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "token",
+        "type": "address"
+      }
+    ],
+    "name": "getGmxPrices",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "tokenMaxPrice",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "tokenMinPrice",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct Lens.GmxPrices",
+        "name": "prices",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256[]",
+        "name": "indices",
+        "type": "uint256[]"
+      }
+    ],
+    "name": "getIncreaseOrders",
+    "outputs": [
+      {
+        "internalType": "uint256[]",
+        "name": "",
+        "type": "uint256[]"
+      },
+      {
+        "internalType": "address[]",
+        "name": "",
+        "type": "address[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "requestKey",
+        "type": "bytes32"
+      }
+    ],
+    "name": "getIncreasePositionRequest",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "account",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "indexToken",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "amountIn",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "minOut",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "sizeDelta",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "isLong",
+            "type": "bool"
+          },
+          {
+            "internalType": "uint256",
+            "name": "acceptablePrice",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "executionFee",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "blockNumber",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "blockTime",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "hasCollateralInETH",
+            "type": "bool"
+          },
+          {
+            "internalType": "address",
+            "name": "callbackTarget",
+            "type": "address"
+          }
+        ],
+        "internalType": "struct IGmxPositionRouter.IncreasePositionRequest",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      }
+    ],
+    "name": "getIncreasePositionsIndex",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      }
+    ],
+    "name": "getLatestDecreaseRequest",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "account",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "indexToken",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "collateralDelta",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "sizeDelta",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "isLong",
+            "type": "bool"
+          },
+          {
+            "internalType": "address",
+            "name": "receiver",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "acceptablePrice",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "minOut",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "executionFee",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "blockNumber",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "blockTime",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "withdrawETH",
+            "type": "bool"
+          },
+          {
+            "internalType": "address",
+            "name": "callbackTarget",
+            "type": "address"
+          }
+        ],
+        "internalType": "struct IGmxPositionRouter.DecreasePositionRequest",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      }
+    ],
+    "name": "getLatestIncreaseRequest",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "account",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "indexToken",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "amountIn",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "minOut",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "sizeDelta",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "isLong",
+            "type": "bool"
+          },
+          {
+            "internalType": "uint256",
+            "name": "acceptablePrice",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "executionFee",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "blockNumber",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "blockTime",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "hasCollateralInETH",
+            "type": "bool"
+          },
+          {
+            "internalType": "address",
+            "name": "callbackTarget",
+            "type": "address"
+          }
+        ],
+        "internalType": "struct IGmxPositionRouter.IncreasePositionRequest",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      },
+      {
+        "internalType": "address[]",
+        "name": "collateralTokens",
+        "type": "address[]"
+      },
+      {
+        "internalType": "address[]",
+        "name": "indexTokens",
+        "type": "address[]"
+      },
+      {
+        "internalType": "bool[]",
+        "name": "isLong",
+        "type": "bool[]"
+      }
+    ],
+    "name": "getPositions",
+    "outputs": [
+      {
+        "internalType": "uint256[]",
+        "name": "",
+        "type": "uint256[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "index",
+        "type": "uint256"
+      }
+    ],
+    "name": "getRequestKey",
+    "outputs": [
+      {
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "traderWallet",
+        "type": "address"
+      }
+    ],
+    "name": "getTraderWalletData",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "totalFundsUSD",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "unusedFundsUSD",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "deployedUSD",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "currentValueUSD",
+            "type": "uint256"
+          },
+          {
+            "internalType": "int256",
+            "name": "returnsUSD",
+            "type": "int256"
+          },
+          {
+            "internalType": "int256",
+            "name": "returnsPercent",
+            "type": "int256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "uvTvUnused",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "usdDecimals",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct Lens.TraderWalletData",
+        "name": "result",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "usersVault",
+        "type": "address"
+      }
+    ],
+    "name": "getUsersVaultData",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "totalFundsUSD",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "unusedFundsUSD",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "deployedUSD",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "currentValueUSD",
+            "type": "uint256"
+          },
+          {
+            "internalType": "int256",
+            "name": "returnsUSD",
+            "type": "int256"
+          },
+          {
+            "internalType": "int256",
+            "name": "returnsPercent",
+            "type": "int256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "totalShares",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "sharePrice",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "usdDecimals",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct Lens.UsersVaultData",
+        "name": "result",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "usersVault",
+        "type": "address"
+      }
+    ],
+    "name": "getWithdrawData",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "amountUSD",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "sharesToBurn",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "sharePrice",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "totalRequests",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "usdDecimals",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct Lens.WithdrawData",
+        "name": "result",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "gmxOrderBook",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "gmxOrderBookReader",
+    "outputs": [
+      {
+        "internalType": "contract IGmxOrderBookReader",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "gmxPositionManager",
+    "outputs": [
+      {
+        "internalType": "contract IGmxPositionManager",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "gmxPositionRouter",
+    "outputs": [
+      {
+        "internalType": "contract IGmxPositionRouter",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "gmxReader",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "gmxVault",
+    "outputs": [
+      {
+        "internalType": "contract IGmxVault",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "index",
+        "type": "uint256"
+      }
+    ],
+    "name": "increaseOrder",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "account",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "purchaseToken",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "purchaseTokenAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "collateralToken",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "indexToken",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "sizeDelta",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "isLong",
+            "type": "bool"
+          },
+          {
+            "internalType": "uint256",
+            "name": "triggerPrice",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "triggerAboveThreshold",
+            "type": "bool"
+          },
+          {
+            "internalType": "uint256",
+            "name": "executionFee",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct IGmxOrderBook.IncreaseOrder",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      }
+    ],
+    "name": "increaseOrdersIndex",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "limitOrderMinExecutionFee",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "quoter",
+    "outputs": [
+      {
+        "internalType": "contract IQuoterV2",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "requestMinExecutionFee",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  }
+]

@@ -1,0 +1,380 @@
+[
+  {
+    "inputs": [],
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
+  {
+    "inputs": [],
+    "name": "BadPrice",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "GracePeriodNotOver",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "NoObserver",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "token",
+        "type": "address"
+      }
+    ],
+    "name": "NoOracleForToken",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "NotUniqiueValues",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "SequencerDown",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "TooOldPrice",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "WrongAddress",
+    "type": "error"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint8",
+        "name": "version",
+        "type": "uint8"
+      }
+    ],
+    "name": "Initialized",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "previousOwner",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "newOwner",
+        "type": "address"
+      }
+    ],
+    "name": "OwnershipTransferred",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "token",
+        "type": "address"
+      },
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "dataFeed",
+            "type": "address"
+          },
+          {
+            "internalType": "uint8",
+            "name": "dataFeedDecimals",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint32",
+            "name": "heartbeat",
+            "type": "uint32"
+          },
+          {
+            "internalType": "uint8",
+            "name": "tokenDecimals",
+            "type": "uint8"
+          }
+        ],
+        "indexed": false,
+        "internalType": "struct IDynamicValuation.OracleData",
+        "name": "oracleData",
+        "type": "tuple"
+      }
+    ],
+    "name": "SetChainlinkOracle",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "newGmxObserver",
+        "type": "address"
+      }
+    ],
+    "name": "SetGmxObserver",
+    "type": "event"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "token",
+        "type": "address"
+      }
+    ],
+    "name": "chainlinkOracles",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "dataFeed",
+            "type": "address"
+          },
+          {
+            "internalType": "uint8",
+            "name": "dataFeedDecimals",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint32",
+            "name": "heartbeat",
+            "type": "uint32"
+          },
+          {
+            "internalType": "uint8",
+            "name": "tokenDecimals",
+            "type": "uint8"
+          }
+        ],
+        "internalType": "struct IDynamicValuation.OracleData",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "decimals",
+    "outputs": [
+      {
+        "internalType": "uint8",
+        "name": "",
+        "type": "uint8"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "factory",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "addr",
+        "type": "address"
+      }
+    ],
+    "name": "getDynamicValuation",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "valuation",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "token",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      }
+    ],
+    "name": "getOraclePrice",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "gmxObserver",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_factory",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "_sequencerUptimeFeed",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "_gmxObserver",
+        "type": "address"
+      }
+    ],
+    "name": "initialize",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "owner",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "renounceOwnership",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "sequencerUptimeFeed",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "token",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "priceFeed",
+        "type": "address"
+      },
+      {
+        "internalType": "uint32",
+        "name": "heartbeat",
+        "type": "uint32"
+      }
+    ],
+    "name": "setChainlinkPriceFeed",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "newValue",
+        "type": "address"
+      }
+    ],
+    "name": "setGmxObserver",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "newOwner",
+        "type": "address"
+      }
+    ],
+    "name": "transferOwnership",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "useSequencer",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  }
+]
